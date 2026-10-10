@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-label="Коммерческое помещение, локальная заглушка">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e9ddce"/><stop offset=".5" stop-color="#6b5b4d"/><stop offset="1" stop-color="#171512"/></linearGradient></defs>
+  <rect width="1400" height="1050" fill="url(#g)"/>
+  <rect x="120" y="165" width="1160" height="620" rx="10" fill="#fff8ef" opacity=".14"/>
+  <rect x="230" y="260" width="320" height="390" rx="8" fill="#fff8ef" opacity=".7"/>
+  <rect x="610" y="260" width="560" height="150" rx="8" fill="#171512" opacity=".72"/>
+  <rect x="610" y="470" width="560" height="180" rx="8" fill="#b87942" opacity=".42"/>
+  <path d="M185 850h1010" stroke="#fff8ef" stroke-opacity=".38" stroke-width="12" stroke-linecap="round"/>
+</svg>

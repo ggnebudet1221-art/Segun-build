@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { siteConfig } from './config/site';
 import { projects, type Project } from './data/projects';
 import { useReveal } from './hooks/useReveal';
+import { assetPath } from './lib/assets';
 import { trackEvent } from './lib/analytics';
 
 const mainServices = [
@@ -229,7 +230,7 @@ function App() {
           </div>
           <div className="hero-media" data-reveal>
             <img
-              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&h=1700&q=86"
+              src={assetPath('placeholders/hero-interior.svg')}
               alt="Современный интерьер после ремонта"
               width="1600"
               height="1700"
@@ -299,7 +300,7 @@ function App() {
           <div className="leader-media" data-reveal>
             <div className="leader-main-photo">
               <img
-                src="/team/leader-main.webp"
+                src={assetPath('team/leader-main.webp')}
                 alt="Руководитель команды"
                 loading="lazy"
                 width="1050"
@@ -308,8 +309,8 @@ function App() {
               <span>Руководитель команды</span>
             </div>
             <div className="leader-small-photos" aria-label="Активный образ жизни руководителя">
-              <img src="/team/leader-marathon.webp" alt="Руководитель на марафоне" loading="lazy" width="640" height="640" />
-              <img src="/team/leader-cold.webp" alt="Руководитель во время зимней активности" loading="lazy" width="640" height="640" />
+              <img src={assetPath('team/leader-marathon.webp')} alt="Руководитель на марафоне" loading="lazy" width="640" height="640" />
+              <img src={assetPath('team/leader-cold.webp')} alt="Руководитель во время зимней активности" loading="lazy" width="640" height="640" />
             </div>
           </div>
           <div className="about-copy leader-copy" data-reveal>
@@ -386,14 +387,6 @@ function App() {
         </address>
         <p>© {new Date().getFullYear()}. Ремонт и отделка в Уфе.</p>
       </footer>
-
-      <div className="mobile-contact-bar" aria-label="Быстрая связь">
-        {contactLinks.map(({ label, href, icon: Icon, event }) => (
-          <a href={href} key={label} onClick={() => trackEvent(event, { place: 'mobile_bar' })}>
-            <Icon size={17} /> {label}
-          </a>
-        ))}
-      </div>
 
       {activeProject && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={activeProject.title}>

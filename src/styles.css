@@ -91,8 +91,7 @@ a {
 .hero-actions,
 .contact-actions,
 .hero-points,
-.service-cta div,
-.mobile-contact-bar a {
+.service-cta div {
   display: flex;
   align-items: center;
 }
@@ -196,16 +195,31 @@ a {
   background: rgba(255, 250, 242, 0.94);
   box-shadow: 0 22px 60px rgba(23, 21, 18, 0.18);
   backdrop-filter: blur(18px);
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-6px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transform: translateY(-8px) scale(0.98);
+  transform-origin: top right;
+  transition:
+    opacity 220ms ease,
+    transform 240ms ease,
+    max-height 280ms ease,
+    visibility 0s linear 280ms;
 }
 
 .header-contact-panel.is-open {
+  visibility: visible;
+  max-height: 280px;
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 220ms ease,
+    transform 240ms ease,
+    max-height 280ms ease,
+    visibility 0s;
 }
 
 .header-contact-panel a {
@@ -848,8 +862,9 @@ h3 {
   gap: 30px;
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(23, 21, 18, 0.78), rgba(23, 21, 18, 0.55)),
-    url("https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1800&h=950&q=84") center/cover;
+    linear-gradient(135deg, rgba(23, 21, 18, 0.92), rgba(23, 21, 18, 0.7)),
+    radial-gradient(circle at 82% 18%, rgba(184, 121, 66, 0.34), transparent 34%),
+    linear-gradient(115deg, #171512 0%, #40352a 48%, #75624d 100%);
   color: var(--paper-strong);
   box-shadow: var(--shadow);
 }
@@ -894,10 +909,6 @@ h3 {
 
 .footer a {
   color: var(--ink);
-}
-
-.mobile-contact-bar {
-  display: none;
 }
 
 .lightbox {
@@ -1194,36 +1205,12 @@ h3 {
   }
 
   .header-contact-panel {
-    right: 0;
-    width: min(330px, calc(100vw - 20px));
-  }
-
-  .mobile-contact-bar {
     position: fixed;
+    top: 84px;
     left: 10px;
     right: 10px;
-    bottom: 10px;
-    z-index: 60;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    padding: 7px;
-    border: 1px solid rgba(255, 255, 255, 0.46);
-    border-radius: 12px;
-    background: rgba(23, 21, 18, 0.9);
-    box-shadow: 0 18px 48px rgba(23, 21, 18, 0.28);
-    backdrop-filter: blur(18px);
-  }
-
-  .mobile-contact-bar a {
-    justify-content: center;
-    gap: 6px;
-    min-height: 42px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.09);
-    color: var(--paper-strong);
-    font-size: 0.82rem;
-    font-weight: 720;
+    width: auto;
+    transform-origin: top right;
   }
 
   .lightbox {

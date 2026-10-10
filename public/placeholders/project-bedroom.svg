@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-label="Спальня, локальная заглушка">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f6efe5"/><stop offset="1" stop-color="#756b5d"/></linearGradient></defs>
+  <rect width="1400" height="1050" fill="url(#g)"/>
+  <rect x="0" y="720" width="1400" height="330" fill="#40352b" opacity=".82"/>
+  <rect x="170" y="505" width="760" height="245" rx="18" fill="#fff8ef" opacity=".88"/>
+  <rect x="245" y="420" width="230" height="135" rx="10" fill="#d8c6b3"/>
+  <rect x="505" y="420" width="230" height="135" rx="10" fill="#c7b39f"/>
+  <rect x="1015" y="150" width="185" height="610" rx="8" fill="#211d19" opacity=".78"/>
+  <path d="M125 225h590" stroke="#171512" stroke-opacity=".16" stroke-width="10" stroke-linecap="round"/>
+</svg>
