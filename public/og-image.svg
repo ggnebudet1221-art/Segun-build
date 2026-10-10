@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#171512"/>
+  <rect x="64" y="64" width="1072" height="502" rx="34" fill="#F3EFE8"/>
+  <path d="M124 454V192L302 91L480 192V454" stroke="#171512" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M202 454V273H402V454" stroke="#C8905A" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="560" y="245" fill="#171512" font-family="Arial, sans-serif" font-size="72" font-weight="700">Ремонт и отделка</text>
+  <text x="560" y="326" fill="#3C3730" font-family="Arial, sans-serif" font-size="36">в Уфе для квартир, домов и помещений</text>
+  <text x="560" y="395" fill="#7A6047" font-family="Arial, sans-serif" font-size="30">Напишите, позвоните — обсудим задачу</text>
+</svg>
